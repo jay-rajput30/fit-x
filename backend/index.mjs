@@ -4,6 +4,8 @@ import exerciseRouter from "./routes/exercise.route.mjs";
 import foodRouter from "./routes/food.route.mjs";
 import goalRouter from "./routes/goal.route.mjs";
 
+//hosted BE link: https://fitxbe.onrender.com
+
 const app = express();
 
 app.use(express.json());
