@@ -14,4 +14,4 @@ const goalSchema = mongoose.Schema(
   { timestamps: true }
 );
 
-export const Goal = mongoose.model("food", goalSchema);
+export const Goal = mongoose.model("goal", goalSchema);

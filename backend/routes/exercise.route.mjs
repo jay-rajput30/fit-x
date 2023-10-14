@@ -11,9 +11,9 @@ exerciseRouter.get("/", async (req, res) => {
   try {
     const { success, data, error } = await getAllExercises();
     if (success) {
-      res.status(200).json({ data, error });
+      res.status(200).json({ data, error, success });
     } else {
-      res.status(400).json({ data, error });
+      res.status(400).json({ data, error, success });
     }
   } catch (e) {
     res.status(400).json({ data: null, error: e.message });
@@ -25,24 +25,24 @@ exerciseRouter.post("/", async (req, res) => {
     const newExerciseData = req.body;
     const { success, data, error } = await addNewExercise(newExerciseData);
     if (success) {
-      res.status(200).json({ data, error });
+      res.status(200).json({ data, error, success });
     } else {
-      res.status(400).json({ data, error });
+      res.status(400).json({ data, error, success });
     }
   } catch (e) {
     res.status(400).json({ data: null, error: e.message });
   }
 });
 
-exerciseRouter.delete("/:id", async (req, res) => {
+exerciseRouter.delete("/:exerciseId", async (req, res) => {
   try {
-    const exerciseId = req.params.id;
-    console.log({ exerciseId });
+    const exerciseId = req.params.exerciseId;
+
     const { success, data, error } = await deleteExercise(exerciseId);
     if (success) {
-      res.status(200).json({ data, error });
+      res.status(204).json({ data, error, success });
     } else {
-      res.status(400).json({ data, error });
+      res.status(400).json({ data, error, success });
     }
   } catch (e) {
     res.status(400).json({ data: null, error: e.message });

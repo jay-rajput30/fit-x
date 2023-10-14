@@ -36,7 +36,6 @@ export const addNewExercise = async (newExerciseData) => {
 };
 
 export const deleteExercise = async (exerciseId) => {
-  console.log({ exerciseId });
   try {
     const exerciseDeleted = await Exercise.findOneAndDelete(
       { _id: exerciseId },

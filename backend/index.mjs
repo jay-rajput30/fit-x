@@ -5,7 +5,7 @@ import exerciseRouter from "./routes/exercise.route.mjs";
 const app = express();
 
 app.use(express.json());
-app.use("/exercises", exerciseRouter);
+app.use("/api/exercises", exerciseRouter);
 
 dbConnect();
 const PORT = process.env.PORT | 3000;
