@@ -1,11 +1,15 @@
 import express from "express";
 import { dbConnect } from "./db.mjs";
 import exerciseRouter from "./routes/exercise.route.mjs";
+import foodRouter from "./routes/food.route.mjs";
+import goalRouter from "./routes/goal.route.mjs";
 
 const app = express();
 
 app.use(express.json());
 app.use("/api/exercises", exerciseRouter);
+app.use("/api/food", foodRouter);
+app.use("/api/goals", goalRouter);
 
 dbConnect();
 const PORT = process.env.PORT | 3000;

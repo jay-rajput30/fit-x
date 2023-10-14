@@ -4,11 +4,11 @@ const goalSchema = mongoose.Schema(
   {
     name: String,
     description: String,
-    targetDate: Number,
+    targetDate: Date,
     targetCalorie: Number,
     status: {
       type: String,
-      enum: ["inprogress", "achieved", "abondoned"],
+      enum: ["In Progress", "Achieved", "Abondoned"],
     },
   },
   { timestamps: true }
