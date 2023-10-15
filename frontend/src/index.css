@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.exercise-input {
+  @apply w-full text-center border-solid border-2 border-rose-300 rounded py-1;
+}

@@ -3,11 +3,20 @@ import { dbConnect } from "./db.mjs";
 import exerciseRouter from "./routes/exercise.route.mjs";
 import foodRouter from "./routes/food.route.mjs";
 import goalRouter from "./routes/goal.route.mjs";
-
+import cors from "cors";
 //hosted BE link: https://fitxbe.onrender.com
 
 const app = express();
-
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://fitxbe.onrender.com",
+      "http://fitxbe.onrender.com",
+    ],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use("/api/exercises", exerciseRouter);
 app.use("/api/food", foodRouter);
