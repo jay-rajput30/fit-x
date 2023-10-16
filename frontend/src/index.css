@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .exercise-input {
-  @apply w-full text-center border-solid border-2 border-rose-300 rounded py-1;
+  @apply w-full text-center border-solid border-4 border-rose-300 rounded py-1;
 }

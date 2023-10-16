@@ -37,10 +37,11 @@ exerciseRouter.post("/", async (req, res) => {
 exerciseRouter.delete("/:exerciseId", async (req, res) => {
   try {
     const exerciseId = req.params.exerciseId;
-
+    console.log;
     const { success, data, error } = await deleteExercise(exerciseId);
+    console.log({ deletedData: data });
     if (success) {
-      res.status(204).json({ data, error, success });
+      res.status(200).json({ data, error, success });
     } else {
       res.status(400).json({ data, error, success });
     }
