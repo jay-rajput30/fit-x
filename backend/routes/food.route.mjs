@@ -40,7 +40,7 @@ foodRouter.delete("/:foodId", async (req, res) => {
 
     const { success, data, error } = await deleteFood(foodId);
     if (success) {
-      res.status(204).json({ data, error, success });
+      res.status(200).json({ data, error, success });
     } else {
       res.status(400).json({ data, error, success });
     }
