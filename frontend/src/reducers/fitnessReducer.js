@@ -50,7 +50,7 @@ export const fitnessReducer = (state = initialState, action) => {
       return { ...state, foods: [...state.foods, action.payload] };
     }
     case "ADD_FOOD_FAILURE": {
-      return { ...state, loading: false, error: "unable to add new exercise" };
+      return { ...state, loading: false, error: "unable to add new food" };
     }
     case "DELETE_FOOD_SUCCESS": {
       return {
@@ -64,7 +64,7 @@ export const fitnessReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        error: "error deleting exercise",
+        error: "error deleting food",
       };
     }
     case "FETCH_FOODS_SUCCESS": {
@@ -79,14 +79,14 @@ export const fitnessReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        error: "error fetching exercises",
+        error: "error fetching foods",
       };
     }
     case "ADD_GOAL_SUCCESS": {
       return { ...state, goals: [...state.goals, action.payload] };
     }
-    case "ADD_FOOD_FAILURE": {
-      return { ...state, loading: false, error: "unable to add new exercise" };
+    case "ADD_GOAL_FAILURE": {
+      return { ...state, loading: false, error: "unable to add new goal" };
     }
     case "DELETE_GOAL_SUCCESS": {
       return {
@@ -100,10 +100,10 @@ export const fitnessReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        error: "error deleting exercise",
+        error: "error deleting goal",
       };
     }
-    case "FETCH_GOAL_SUCCESS": {
+    case "FETCH_GOALS_SUCCESS": {
       return {
         ...state,
         goals: action.payload,
@@ -111,11 +111,11 @@ export const fitnessReducer = (state = initialState, action) => {
         error: null,
       };
     }
-    case "FETCH_GOAL_FAILURE": {
+    case "FETCH_GOALS_FAILURE": {
       return {
         ...state,
         loading: false,
-        error: "error fetching exercises",
+        error: "error fetching goals",
       };
     }
     default:
