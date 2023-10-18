@@ -1,4 +1,4 @@
-export const fetchExercises = async (dispatch) => {
+export const fetchExercises = () => async (dispatch) => {
   try {
     const response = await fetch("https://fitxbe.onrender.com/api/exercises");
     const data = await response.json();
@@ -47,7 +47,7 @@ export const deleteExercise = (exerciseId) => async (dispatch) => {
   }
 };
 
-export const fetchFoods = async (dispatch) => {
+export const fetchFoods = () => async (dispatch) => {
   try {
     const response = await fetch("https://fitxbe.onrender.com/api/food");
     const data = await response.json();
@@ -88,7 +88,7 @@ export const deletefood = (foodId) => async (dispatch) => {
       }
     );
     const data = await response.json();
-    console.log({ response, data });
+
     dispatch({ type: "DELETE_FOOD_SUCCESS", payload: data.data._id });
   } catch (e) {
     console.error("something went wrong,", e.message);

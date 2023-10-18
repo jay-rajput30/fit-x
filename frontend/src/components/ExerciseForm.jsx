@@ -16,7 +16,7 @@ const ExerciseForm = () => {
   return (
     <form
       onSubmit={exerciseFormSubmitHandler}
-      className="flex flex-col justify-start items-center w-1/4 mt-4 py-14 px-5 h-1/3 gap-6 border-rose-300 border-solid border-2 rounded "
+      className="flex flex-col justify-start items-center w-1/4 mt-4 py-14 px-5  gap-6 border-rose-300 border-solid border-2 rounded "
     >
       <input
         type="text"

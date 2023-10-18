@@ -8,7 +8,7 @@ const ExerciseList = ({ exerciseList }) => {
   const deleteExerciseClickHandler = (exerciseId) => {
     dispatch(deleteExercise(exerciseId));
   };
-  console.log({ exerciseList });
+
   return (
     <section className="w-full flex flex-row gap-16 p-4">
       {exerciseList.map((exercise) => {
