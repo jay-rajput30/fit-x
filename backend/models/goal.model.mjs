@@ -8,7 +8,7 @@ const goalSchema = mongoose.Schema(
     targetCalorie: Number,
     status: {
       type: String,
-      enum: ["In Progress", "Achieved", "Abondoned"],
+      enum: ["In Progress", "Achieved", "Abandoned"],
     },
   },
   { timestamps: true }

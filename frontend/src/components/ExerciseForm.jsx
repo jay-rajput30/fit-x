@@ -21,6 +21,7 @@ const ExerciseForm = () => {
       <input
         type="text"
         placeholder="enter exercise name"
+        value={exerciseFormData.name}
         onChange={(e) =>
           setExerciseFormData({ ...exerciseFormData, name: e.target.value })
         }
@@ -29,6 +30,7 @@ const ExerciseForm = () => {
       <input
         type="number"
         placeholder="enter exercise duration"
+        value={setExerciseFormData.duration}
         onChange={(e) =>
           setExerciseFormData({
             ...exerciseFormData,
@@ -40,6 +42,7 @@ const ExerciseForm = () => {
       <input
         type="number"
         placeholder="enter calories burnt by exercise"
+        value={setExerciseFormData.calorieBurnt}
         onChange={(e) =>
           setExerciseFormData({
             ...exerciseFormData,
