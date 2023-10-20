@@ -9,7 +9,7 @@ const Goal = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetchGoals(dispatch);
+    dispatch(fetchGoals());
   }, [dispatch]);
   return (
     <div className="flex flex-col items-center justify-start h-screen gap-32">

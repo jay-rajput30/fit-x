@@ -1,8 +1,9 @@
 export const fetchExercises = () => async (dispatch) => {
+  console.log("fetch exercises function called");
   try {
     const response = await fetch("https://fitxbe.onrender.com/api/exercises");
     const data = await response.json();
-
+    console.log({ exerciseData: data.data });
     dispatch({ type: "FETCH_EXERCISES_SUCCESS", payload: data.data });
   } catch (e) {
     console.error("something went wrong,", e.message);
